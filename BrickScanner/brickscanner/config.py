@@ -5,8 +5,8 @@ Centralized environment and table configuration.
 """
 
 # Databricks catalog and schema
-CATALOG_NAME = "gen_qa"
-SCHEMA_NAME = "analytics_bis_bronze"
+CATALOG_NAME = "brickscanner"
+SCHEMA_NAME = "bs_schema"
 
 # LLM configuration
 LLM_MODEL_NAME = "databricks-claude-sonnet-4-6"
