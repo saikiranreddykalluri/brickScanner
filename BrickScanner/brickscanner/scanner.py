@@ -14,7 +14,6 @@ import uuid
 from typing import Optional
 
 import pandas as pd
-
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.docstore.document import Document
 from langchain.prompts import ChatPromptTemplate

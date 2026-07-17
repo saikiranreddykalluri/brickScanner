@@ -132,7 +132,7 @@ def get_nb_paths(
                 and item.path.lower().endswith(".py")
             )
         )
-            def _recurse(folder: str) -> None:
+    def _recurse(folder: str) -> None:
         try:
             objects = wobj.workspace.list(folder)
 

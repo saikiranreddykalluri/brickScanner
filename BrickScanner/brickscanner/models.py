@@ -66,4 +66,3 @@ class ReviewResponse(BaseModel):
         ...,
         description="Exactly one RuleReview per rule — no duplicates, no omissions.",
     )
-}
