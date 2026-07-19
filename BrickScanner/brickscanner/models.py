@@ -67,6 +67,11 @@ class RuleReview(BaseModel):
         ...,
         description="Severity level, or N/A if the rule does not apply.",
     )
+
+    matching_content: str = Field(
+        alias="matchingcontent",
+        description=(
+            "Exact substring copied from the reviewed code. "
             "Use 'No violation found' when severity is N/A."
         ),
     )
