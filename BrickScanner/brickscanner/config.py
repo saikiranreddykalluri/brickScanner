@@ -15,7 +15,7 @@ from typing import Final
 # ---------------------------------------------------------------------
 
 CATALOG_NAME: Final[str] = "gen_qa"
-SCHEMA_NAME: Final[str] = "analytics_bis_bronze"
+SCHEMA_NAME: Final[str] = "utils"
 
 
 # ---------------------------------------------------------------------
