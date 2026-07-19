@@ -33,7 +33,7 @@ DB_TABLES: Final[dict[str, str]] = {
 # LLM settings
 # ---------------------------------------------------------------------
 
-LLM_MODEL_NAME: Final[str] = "databricks-claude-sonnet-4-6"
+LLM_MODEL_NAME: Final[str] = "databricks-meta-llama-3-3-70b-instruct"
 CHUNK_SIZE: Final[int] = 10_000  # characters per LLM invocation
 CHUNK_OVERLAP: Final[int] = 0  # characters to overlap between chunks
 

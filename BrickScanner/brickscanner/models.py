@@ -45,15 +45,28 @@ class RuleReview(BaseModel):
         ),
     )
 
+    @property
+    def comment_lines(self) -> list[str]:
+        """
+        Returns the comment split into three lines:
+        - Issue: issue identified
+        - Impact: impact of the code piece
+        - Better alternative: suggested improvement
+        """
+        lines = self.comment.split('\n')
+        if len(lines) < 3:
+            # Pad missing lines for consistent output
+            lines += [""] * (3 - len(lines))
+        return [
+            f"Issue: {lines[0]}",
+            f"Impact: {lines[1]}",
+            f"Better alternative: {lines[2]}"
+        ]
+
     severity: Literal["1-High", "2-Medium", "3-Low", "N/A"] = Field(
         ...,
         description="Severity level, or N/A if the rule does not apply.",
     )
-
-    matching_content: str = Field(
-        alias="matchingcontent",
-        description=(
-            "Exact substring copied from the reviewed code. "
             "Use 'No violation found' when severity is N/A."
         ),
     )
